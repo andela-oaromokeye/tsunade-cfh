@@ -255,24 +255,6 @@ angular.module('mean.system')
         game.players = [];
         game.time = 0;
         socket.emit('leaveGame');
-        $http({
-          method: 'POST',
-          url: `/api/games/${game.gameID}/end`,
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          data: {
-            gameID: game.gameID,
-            players: game.players,
-            completed: true,
-            rounds: game.round,
-            winner: game.gameWinner
-          }
-        })
-          .success((res) => {
-            return res;
-          })
-          .error(err => err);
       };
 
       game.drawCard = () => {
