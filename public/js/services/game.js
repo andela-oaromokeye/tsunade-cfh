@@ -251,6 +251,7 @@ angular.module('mean.system')
             return err;
           });
       };
+
       game.leaveGame = () => {
         game.players = [];
         game.time = 0;
