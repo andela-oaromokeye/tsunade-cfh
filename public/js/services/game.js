@@ -294,9 +294,7 @@ angular.module('mean.system')
           card: card.id
         });
       };
-
       decrementTime();
-
       return game;
     }
   ]);
